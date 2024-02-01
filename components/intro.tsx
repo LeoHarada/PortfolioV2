@@ -62,15 +62,36 @@ export default function Intro() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <span className="font-bold">Aloha, I'm Leo.</span> I'm a{" "}
-                <span className="font-bold">full-stack developer</span> with a
+                <span className="font-bold text-[#ff335f]">
+                    Aloha, I'm Leo.
+                </span>{" "}
+                A <span className="font-bold">full-stack developer</span> with a
                 focus on <span className="font-bold">front-end</span> stacks. I
-                enjoy building <span className="font-bold">fun & engaging</span>{" "}
-                websites with{" "}
-                <span className="font-bold">
-                    React (Next.js) and Typescript
-                </span>
-                .
+                thrive on infusing{" "}
+                <div className="relative inline-block group">
+                    <span className="transition-all duration-300 ease-in-out group-hover:scale-x-100">
+                        interactive
+                    </span>
+                    <span className="absolute left-0 right-0 bottom-0 z-[-1] h-5 bg-gray-200 dark:bg-gray-600"></span>
+                    <span className="absolute left-0 right-0 bottom-0 z-[-1] h-5 bg-violet-400 transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+                </div>{" "}
+                elements &{" "}
+                <div className="relative inline-block group">
+                    <span className="transition-all duration-300 ease-in-out group-hover:scale-x-100">
+                        playful
+                    </span>
+                    <span className="absolute left-0 right-0 bottom-0 z-[-1] h-5 bg-gray-200 dark:bg-gray-600"></span>
+                    <span className="absolute left-0 right-0 bottom-0 z-[-1] h-5 bg-green-400 transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+                </div>{" "}
+                themes into my web designs, creating digital{" "}
+                <div className="relative inline-block group">
+                    <span className="transition-all duration-300 ease-in-out group-hover:scale-x-100">
+                        experiences
+                    </span>
+                    <span className="absolute left-0 right-0 bottom-0 z-[-1] h-5 bg-gray-200 dark:bg-gray-600"></span>
+                    <span className="absolute left-0 right-0 bottom-0 z-[-1] h-5 bg-blue-400 transform scale-x-0 origin-left transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+                </div>{" "}
+                that leave a lasting impression .
             </motion.h1>
 
             <motion.div
@@ -89,14 +110,14 @@ export default function Intro() {
                     }}
                     className={`
         relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
-        border-violet-300 px-4 py-2 font-semibold
-        text-violet-300 transition-all duration-500
+        border-violet-400 px-4 py-2 font-semibold
+        text-violet-400 transition-all duration-500
         
         before:absolute before:inset-0
         before:-z-10 before:translate-x-[150%]
         before:translate-y-[150%] before:scale-[2.5]
-        before:rounded-[100%] before:bg-violet-300
-        before:transition-transform before:duration-500
+        before:rounded-[100%] before:bg-violet-400
+        before:transition-transform before:duration-1000
         before:content-[""]
 
         hover:scale-105 hover:text-neutral-900
@@ -112,14 +133,14 @@ export default function Intro() {
                     download
                     className={`
         relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
-        border-violet-300 px-4 py-2 font-semibold
-        text-violet-300 transition-all duration-500
+        border-violet-400 px-4 py-2 font-semibold
+        text-violet-400 transition-all duration-500
         
         before:absolute before:inset-0
         before:-z-10 before:translate-x-[150%]
         before:translate-y-[150%] before:scale-[2.5]
-        before:rounded-[100%] before:bg-violet-300
-        before:transition-transform before:duration-300
+        before:rounded-[100%] before:bg-violet-400
+        before:transition-transform before:duration-1000
         before:content-[""]
 
         hover:scale-105 hover:text-neutral-900

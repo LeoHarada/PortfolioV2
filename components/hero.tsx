@@ -64,7 +64,7 @@ export default function Hero() {
                 <h1 className="text-center text-7xl font-black uppercase text-white sm:text-8xl md:text-9xl">
                     Leo Harada
                 </h1>
-                <h3 className="text-center text-2xl font-black text-white sm:text-3xl md:text-4xl">
+                <h3 className="text-center text-white text-2xl font-black text-whitesmoke sm:text-3xl md:text-4xl">
                     Frontend Developer
                 </h3>
                 <p className="mb-6 mt-4 max-w-3xl text-center text-lg font-light text-neutral-400 md:text-xl">
