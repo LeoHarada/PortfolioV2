@@ -30,8 +30,10 @@ export default function About() {
                 <span className="font-bold">
                     React, Next.js, Node.js, and MongoDB
                 </span>
-                . I am also familiar with TypeScript and PostgreSQL. I am always
-                looking to learn new technologies. I am currently looking for a{" "}
+                . I am also familiar with{" "}
+                <span className="font-bold">TypeScript and PostgreSQL</span>. I
+                am always looking to learn new technologies. I am currently
+                looking for a{" "}
                 <span className="font-bold">full-time position</span> as a
                 software developer.
             </p>
@@ -39,8 +41,8 @@ export default function About() {
             <p>
                 <span className="italic">When I'm not coding</span>, I enjoy
                 playing video games, taking boxing classes, and watching NBA
-                games. I love<span className="font-bold">staying active</span>.
-                I'm a former
+                games. I love <span className="font-bold">staying active</span>.
+                I'm a former{" "}
                 <span className="font-bold">Division 1 Athlete</span> at{" "}
                 <span className="font-bold">
                     University of California, Irvine
