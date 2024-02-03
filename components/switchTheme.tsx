@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 
 const TOGGLE_CLASSES =
-    "text-sm font-medium flex items-center gap-2 px-3 md:pl-3 md:pr-3.5 py-3 md:py-1.5 transition-colors relative z-10";
+    "text-sm font-medium flex items-center px-3 py-3  transition-colors relative z-10";
 
 export default function SwitchTheme() {
     const { theme, toggleTheme } = useTheme();
@@ -48,8 +48,8 @@ export default function SwitchTheme() {
                         }`}
                         onClick={toggleTheme}
                     >
-                        <FiMoon className="relative z-10 text-lg md:text-sm" />
-                        <span className="relative z-10">Light</span>
+                        <FiMoon className="relative z-10 text-lg " />
+                        <span className="relative z-10"></span>
                     </button>
                     <button
                         className={`${TOGGLE_CLASSES} ${
@@ -57,8 +57,8 @@ export default function SwitchTheme() {
                         }`}
                         onClick={toggleTheme}
                     >
-                        <FiSun className="relative z-10 text-lg md:text-sm" />
-                        <span className="relative z-10">Dark</span>
+                        <FiSun className="relative z-10 text-lg" />
+                        <span className="relative z-10"></span>
                     </button>
                     <div
                         className={`absolute inset-0 z-0 flex ${

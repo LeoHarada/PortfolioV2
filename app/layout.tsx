@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/switchTheme";
 import ThemeContextProvider from "@/context/contextTheme";
 import { Toaster } from "react-hot-toast";
+import FloatingNav from "@/components/floatNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
             >
                 <ThemeContextProvider>
                     <ActiveSectionContextProvider>
+                        <FloatingNav />
                         <Header />
                         {children}
                         <Footer />
