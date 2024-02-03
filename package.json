@@ -36,6 +36,7 @@
         "typescript": "^5"
     },
     "devDependencies": {
-        "@types/react-vertical-timeline-component": "^3.3.6"
+        "@types/react-vertical-timeline-component": "^3.3.6",
+        "postcss-nesting": "^12.0.2"
     }
 }

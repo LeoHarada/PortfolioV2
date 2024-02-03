@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Styling for HTML and Global styles.*/
 html {
     --line-color: #e5e7eb;
+    @apply text-[#474747] dark:text-[#F5F5F5];
 }
 
 html.dark {
@@ -11,5 +13,47 @@ html.dark {
 }
 
 .borderBlack {
-    @apply border border-black/10;
+    @apply border border-[#474747];
+}
+/*Styling for About section.*/
+/*Styling for Contact section.*/
+/*Styling for Experience section.*/
+/*Styling for Floating Nav Bar section.*/
+/*Styling for Footer section.*/
+/*Styling for Header section.*/
+/*Styling for Hero section.*/
+/*Styling for Intro section.*/
+
+/*Styling for Project section.*/
+.link-button {
+    @apply relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
+    border-[#474747] dark:border-[#F5F5F5] px-4 py-2 font-semibold
+    text-[#474747] dark:text-[#F5F5F5] transition-all duration-300
+    
+    before:absolute before:inset-0
+    before:-z-10 before:translate-x-[150%]
+    before:translate-y-[150%] before:scale-[2.5]
+    before:rounded-[100%] before:bg-[#474747] before:dark:bg-[#F5F5F5]
+    before:transition-transform before:duration-700
+    before:content-[""]
+
+    hover:text-[#F5F5F5] hover:dark:text-[#474747]
+    hover:before:translate-x-[0%]
+    hover:before:translate-y-[0%]
+    active:scale-95;
+}
+
+.project-images {
+    @apply absolute hidden sm:block top-12 -right-40 w-[28.25rem] rounded-lg shadow-2xl
+    transition 
+    group-hover:scale-[1.04]
+    group-hover:-translate-x-3
+    group-hover:translate-y-3
+    group-hover:-rotate-2
+
+    group-even:group-hover:translate-x-3
+    group-even:group-hover:translate-y-3
+    group-even:group-hover:rotate-2
+
+    group-even:right-[initial] group-even:-left-40;
 }

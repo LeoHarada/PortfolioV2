@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <>
             <Hero />
-            <main className="flex flex-col items-center px-4 pt-32">
+            <div className="flex flex-col items-center px-4 pt-32">
                 <Intro />
                 <SectionDivider />
                 <About />
@@ -19,7 +19,7 @@ export default function Home() {
                 <Skills />
                 <Experience />
                 <Contact />
-            </main>
+            </div>
         </>
     );
 }

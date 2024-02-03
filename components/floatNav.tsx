@@ -1,8 +1,28 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
+import React, {
+    useState,
+    useEffect,
+    FC,
+    Dispatch,
+    SetStateAction,
+} from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import clsx from "clsx";
+
+interface MenuButtonProps {
+    open: boolean;
+    setOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+interface MenuProps {
+    onCloseMenu: () => void;
+}
+
+interface MenuLinkProps {
+    text: string;
+    onCloseMenu: () => void;
+}
 
 export default function FloatingNav() {
     const [open, setOpen] = useState(false);
@@ -51,13 +71,14 @@ export default function FloatingNav() {
     );
 }
 
-const MenuButton = ({ open, setOpen }) => {
+const MenuButton: FC<MenuButtonProps> = ({ open, setOpen }) => {
     return (
         <div
             onClick={() => setOpen((pv) => !pv)}
             className="text-4xl rounded-full bg-black/[0.7] text-gray-300 dark:bg-gray-300 dark:text-black/[0.7]"
         >
             <motion.button
+                aria-label="Floating navigation menu for mobile devices."
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="p-4"
@@ -94,7 +115,7 @@ const MenuButton = ({ open, setOpen }) => {
     );
 };
 
-const Menu = ({ onCloseMenu }) => {
+const Menu: FC<MenuProps> = ({ onCloseMenu }) => {
     return (
         <motion.div
             variants={menuVariants}
@@ -113,7 +134,7 @@ const Menu = ({ onCloseMenu }) => {
     );
 };
 
-const MenuLink = ({ text, onCloseMenu }) => {
+const MenuLink: FC<MenuLinkProps> = ({ text, onCloseMenu }) => {
     const handleClick = () => {
         onCloseMenu();
     };

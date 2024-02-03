@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, MouseEvent } from "react";
 import { useAnimate } from "framer-motion";
 
 export default function Hero() {
     const [scope, animate] = useAnimate();
-
     const [size, setSize] = useState({ columns: 0, rows: 0 });
 
     useEffect(() => {
@@ -24,7 +23,7 @@ export default function Hero() {
         });
     };
 
-    const handleMouseLeave = (e) => {
+    const handleMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
         // @ts-ignore
         const id = `#${e.target.id}`;
         animate(
@@ -34,7 +33,7 @@ export default function Hero() {
         );
     };
 
-    const handleMouseEnter = (e) => {
+    const handleMouseEnter = (e: MouseEvent<HTMLDivElement>) => {
         // @ts-ignore
         const id = `#${e.target.id}`;
         animate(
@@ -64,9 +63,9 @@ export default function Hero() {
                 <h1 className="text-center text-7xl font-black uppercase text-white sm:text-8xl md:text-9xl">
                     Leo Harada
                 </h1>
-                <h3 className="text-center text-white text-2xl font-black text-whitesmoke sm:text-3xl md:text-4xl">
+                <h2 className="text-center text-white text-2xl font-black text-whitesmoke sm:text-3xl md:text-4xl">
                     Frontend Developer
-                </h3>
+                </h2>
                 <p className="mb-6 mt-4 max-w-3xl text-center text-lg font-light text-neutral-400 md:text-xl">
                     Welcome to my World of Innovative and Interactive Web
                     Creations.

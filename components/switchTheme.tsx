@@ -1,7 +1,6 @@
 "use client";
 import { useTheme } from "../context/contextTheme";
 import React, { useEffect, useState } from "react";
-// import { BsMoon, BsSun } from "react-icons/bs";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { motion } from "framer-motion";
 import clsx from "clsx";
@@ -43,6 +42,7 @@ export default function SwitchTheme() {
             <div className="fixed bottom-5 right-8 bg-white bg-opacity-80 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950">
                 <div className="relative flex w-fit items-center rounded-full">
                     <button
+                        aria-label="Button to toggle light theme to dark theme."
                         className={`${TOGGLE_CLASSES} ${
                             theme === "light" ? "text-white" : "text-slate-300"
                         }`}
@@ -52,6 +52,7 @@ export default function SwitchTheme() {
                         <span className="relative z-10"></span>
                     </button>
                     <button
+                        aria-label="Button to toggle dark theme to light theme."
                         className={`${TOGGLE_CLASSES} ${
                             theme === "dark" ? "text-white" : "text-slate-800"
                         }`}
