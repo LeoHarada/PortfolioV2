@@ -2,9 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.jpg";
-import wordanalyticsImg from "@/public/wordanalytics.jpg";
+import Rocco from "@/public/rocco.png";
+import LivingLetters from "@/public/livingletters.jpg";
+import Ecommerce from "@/public/eccomerce.jpg";
+import Blog from "@/public/blog.png";
 
 export const links = [
     {
@@ -35,52 +36,87 @@ export const links = [
 
 export const experiencesData = [
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
+        title: "Past work",
+        location: "Beverly Hills, CA",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+            "I worked as a Sales Manager for two luxury hotels based in Beverly Hills. I gained many skills throughout my experiences; including communication, problem solving, negotiation, time management, teamwork and leadership.",
+        icon: React.createElement(CgWorkAlt),
+        date: "2018 - 2023",
+    },
+    {
+        title: "Graduated bootcamp",
+        location: "Los Angeles, CA",
+        description:
+            "I graduated after 6 months of studying. I immediately continued my personal studies, building out my projects and porfolio website.",
         icon: React.createElement(LuGraduationCap),
-        date: "2019",
+        date: "April - August 2023",
     },
     {
         title: "Front-End Developer",
-        location: "Orlando, FL",
+        location: "Santa Monica, CA",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+            "I started working on my first freelance project for rap artist, Rocco808. I used basic JavaScript, HTML and CSS. Client has a following of 20K fans and has showcased his newly developed website to top talent agencies based in Japan.",
         icon: React.createElement(CgWorkAlt),
-        date: "2019 - 2021",
+        date: "November - December 2023",
     },
     {
         title: "Full-Stack Developer",
-        location: "Houston, TX",
+        location: "Santa Monica, CA",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+            "My second freelance project was with artist Dulcie Yamanaka. With 40K followers on Instagram, I built her an ecommerce site to sell her first product. I used React, Express.js, Node.js, MongoDB, Tailwind and Stripe.",
+        icon: React.createElement(CgWorkAlt),
+        date: "December 2023 - January 2024",
+    },
+    {
+        title: "Full-Stack Developer",
+        location: "Los Angeles, CA",
+        description:
+            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, Node.js, TypeScript, Tailwind, PostgreSQL and MongoDB. I'm open to full-time opportunities.",
         icon: React.createElement(FaReact),
-        date: "2021 - present",
+        date: "present",
     },
 ] as const;
 
 export const projectsData = [
     {
-        title: "CorpComment",
+        title: "The Living Letters",
+        type: "freelance",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-        imageUrl: corpcommentImg,
+            "Static ecommerce website for artist Dulcie Yamanaka. Her 40K Instagram followers are able to purchase her coloring book.",
+        tags: ["React", "MongdoDB", "Node.js", "Expresss", "Tailwind"],
+        imageUrl: LivingLetters,
+        liveLink: "https://thelivinglettersart.com/",
+        githubLink: "https://github.com/LeoHarada/LivingLetters",
     },
     {
-        title: "rmtDev",
+        title: "Rocco808",
+        type: "freelance",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-        imageUrl: rmtdevImg,
+            "Artist website for rapper Rocco808. With over 20K fans, admirers can now feel even closer to their favorite artist.",
+        tags: ["JavaScript", "HTML", "CSS"],
+        imageUrl: Rocco,
+        liveLink: "https://rocco-808.com/",
+        githubLink: "https://github.com/LeoHarada/Rocco808",
     },
     {
-        title: "Word Analytics",
+        title: "CoderHeaven Ecommerce",
+        type: "project",
         description:
-            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-        tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-        imageUrl: wordanalyticsImg,
+            "Ecommerce website for web developer essentials. Users can purchase, filter and upload products.",
+        tags: ["React", "MongdoDB", "Node.js", "Expresss", "Tailwind"],
+        imageUrl: Ecommerce,
+        liveLink: "https://coder-heaven.vercel.app/",
+        githubLink: "https://github.com/LeoHarada/CoderHeaven",
+    },
+    {
+        title: "Personal Blog",
+        type: "project",
+        description:
+            "A public web blog for my coding journey. Sign in through Github OAuth. Users can read, filter and upload articles.",
+        tags: ["React", "PostgreSQL", "Next.js", "Prisma", "Tailwind"],
+        imageUrl: Blog,
+        liveLink: "https://leos-blo.vercel.app/",
+        githubLink: "https://github.com/LeoHarada/leos-blo",
     },
 ] as const;
 
@@ -93,6 +129,7 @@ export const skillsData = [
     "Next.js",
     "Node.js",
     "Git",
+    "Prisma",
     "Tailwind",
     "MongoDB",
     "Redux",

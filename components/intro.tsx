@@ -58,7 +58,7 @@ export default function Intro() {
             </div>
 
             <motion.h1
-                className="mb-10 mt-6 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+                className="my-6 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
@@ -151,22 +151,23 @@ export default function Intro() {
                     <span>Download CV</span>
                     <HiDownload />
                 </a>
+                <div className="flex flex-row justify-center gap-2">
+                    <Link
+                        className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                        href="https://www.linkedin.com/in/leoharada/"
+                        target="_blank"
+                    >
+                        <BsLinkedin />
+                    </Link>
 
-                <a
-                    className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-gray-200"
-                    href="https://www.linkedin.com/in/leoharada/"
-                    target="_blank"
-                >
-                    <BsLinkedin />
-                </a>
-
-                <a
-                    className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-gray-200"
-                    href="https://github.com/LeoHarada"
-                    target="_blank"
-                >
-                    <FaGithubSquare />
-                </a>
+                    <Link
+                        className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                        href="https://github.com/LeoHarada"
+                        target="_blank"
+                    >
+                        <FaGithubSquare />
+                    </Link>
+                </div>
             </motion.div>
         </section>
     );

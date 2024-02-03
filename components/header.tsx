@@ -29,7 +29,7 @@ export default function Header() {
                         >
                             <Link
                                 className={clsx(
-                                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-200 dark:hover:text-violet-300",
+                                    "flex w-full items-center justify-center px-3 py-3 hover:text-violet-300 transition dark:text-gray-200 dark:hover:text-violet-300",
                                     {
                                         "text-gray-950 dark:text-gray-100":
                                             activeSection === link.name,

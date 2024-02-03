@@ -11,7 +11,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/contextTheme";
 
 export default function Experience() {
-    const { ref } = useSectionInView("Experience");
+    const { ref, inView } = useSectionInView("Experience", 0);
     const { theme } = useTheme();
 
     return (
@@ -25,6 +25,7 @@ export default function Experience() {
                 {experiencesData.map((item, index) => (
                     <React.Fragment key={index}>
                         <VerticalTimelineElement
+                            visible={inView}
                             contentStyle={{
                                 background:
                                     theme === "light"
@@ -43,7 +44,6 @@ export default function Experience() {
                             }}
                             date={item.date}
                             icon={item.icon}
-                            visible
                             iconStyle={{
                                 background:
                                     theme === "light"
