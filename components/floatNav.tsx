@@ -1,20 +1,53 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import clsx from "clsx";
 
 export default function FloatingNav() {
     const [open, setOpen] = useState(false);
+    const [isNavVisible, setNavVisible] = useState(true);
+
+    const handleCloseMenu = () => {
+        setOpen(false);
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollThreshold = 100;
+
+            if (window.scrollY > scrollThreshold && isNavVisible) {
+                setNavVisible(false);
+            } else if (window.scrollY <= scrollThreshold && !isNavVisible) {
+                setNavVisible(true);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [isNavVisible]);
 
     return (
-        <motion.nav
-            animate={open ? "open" : "closed"}
-            initial="closed"
-            className="sm:hidden fixed bg-gray-300 text-black/[0.7] shadow-lg flex items-center justify-between rounded-full top-[90%] z-[9999] left-[50%] -translate-x-[50%]"
+        <motion.div
+            className={clsx("z-[999] relative", {
+                "pointer-events-none": isNavVisible,
+            })}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isNavVisible ? 0 : 1 }}
+            transition={{ duration: 1 }}
         >
-            <MenuButton setOpen={setOpen} open={open} />
-            <Menu />
-        </motion.nav>
+            <motion.nav
+                animate={open ? "open" : "closed"}
+                initial="closed"
+                className="sm:hidden fixed bg-gray-300 text-black/[0.7] shadow-lg flex items-center justify-between rounded-full top-[90%] z-[9999] left-[50%] -translate-x-[50%]"
+            >
+                <MenuButton setOpen={setOpen} open={open} />
+                <Menu onCloseMenu={handleCloseMenu} />
+            </motion.nav>
+        </motion.div>
     );
 }
 
@@ -61,32 +94,36 @@ const MenuButton = ({ open, setOpen }) => {
     );
 };
 
-const Menu = () => {
+const Menu = ({ onCloseMenu }) => {
     return (
         <motion.div
             variants={menuVariants}
             style={{ transformOrigin: "bottom", x: "-50%" }}
-            className="p-8 font-semibold rounded-2xl bg-gray-300 shadow-lg absolute bottom-[125%] left-[50%] flex w-[calc(100vw_-_30px)] max-w-lg backdrop-blur-[0.5rem] bg-opacity-80"
+            className="p-8 font-semibold rounded-2xl bg-white shadow-lg absolute bottom-[125%] left-[50%] flex w-[calc(100vw_-_30px)] max-w-lg backdrop-blur-[0.1rem] bg-opacity-80"
         >
             <div className="flex flex-col gap-2 w-full items-center">
-                <MenuLink text="Home" />
-                <MenuLink text="About" />
-                <MenuLink text="Projects" />
-                <MenuLink text="Skills" />
-                <MenuLink text="Experience" />
-                <MenuLink text="Contact" />
+                <MenuLink text="Home" onCloseMenu={onCloseMenu} />
+                <MenuLink text="About" onCloseMenu={onCloseMenu} />
+                <MenuLink text="Projects" onCloseMenu={onCloseMenu} />
+                <MenuLink text="Skills" onCloseMenu={onCloseMenu} />
+                <MenuLink text="Experience" onCloseMenu={onCloseMenu} />
+                <MenuLink text="Contact" onCloseMenu={onCloseMenu} />
             </div>
         </motion.div>
     );
 };
 
-const MenuLink = ({ text }) => {
+const MenuLink = ({ text, onCloseMenu }) => {
+    const handleClick = () => {
+        onCloseMenu();
+    };
     return (
         <motion.a
             variants={menuLinkVariants}
             href={`#${text.toLowerCase()}`}
             rel="nofollow"
             className="text-3xl hover:text-indigo-500 transition-colors flex items-center gap-2"
+            onClick={handleClick}
         >
             {text}
         </motion.a>
