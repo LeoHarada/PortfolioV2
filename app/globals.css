@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.shadow-lg-custom {
+    --tw-shadow: 0 3px 55px #000000, 0 0px 29px #ddd;
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+        0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 /*Styling for HTML and Global styles.*/
 html {
     --line-color: #e5e7eb;

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 
 const TOGGLE_CLASSES =
-    "text-sm font-medium flex items-center px-3 py-3  transition-colors relative z-10";
+    "text-sm font-medium flex items-center px-3 py-3 transition-colors relative z-10";
 
 export default function SwitchTheme() {
     const { theme, toggleTheme } = useTheme();

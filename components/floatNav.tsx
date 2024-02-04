@@ -62,7 +62,7 @@ export default function FloatingNav() {
             <motion.nav
                 animate={open ? "open" : "closed"}
                 initial="closed"
-                className="sm:hidden fixed bg-gray-300 text-black/[0.7] shadow-lg flex items-center justify-between rounded-full top-[90%] z-[9999] left-[50%] -translate-x-[50%]"
+                className="sm:hidden fixed bg-gray-300 text-black/[0.7] shadow-lg flex items-center justify-between rounded-full bottom-3 z-[9999] left-[50%] -translate-x-[50%]"
             >
                 <MenuButton setOpen={setOpen} open={open} />
                 <Menu onCloseMenu={handleCloseMenu} />
@@ -75,7 +75,7 @@ const MenuButton: FC<MenuButtonProps> = ({ open, setOpen }) => {
     return (
         <div
             onClick={() => setOpen((pv) => !pv)}
-            className="text-4xl rounded-full bg-black/[0.7] text-gray-300 dark:bg-gray-300 dark:text-black/[0.7]"
+            className="text-4xl rounded-full bg-black/[0.7] text-gray-300 dark:bg-gray-300 dark:text-black/[0.7] shadow-lg-custom"
         >
             <motion.button
                 aria-label="Floating navigation menu for mobile devices."
