@@ -28,7 +28,7 @@ export default function About() {
                 <span className="underline">love</span> the feeling of finally
                 figuring out a solution to a problem. My core stack is{" "}
                 <span className="font-bold">
-                    React, Next.js, Node.js, and MongoDB
+                    React, Next.js, Node.js, MongoDB, Tailwind
                 </span>
                 . I am also familiar with{" "}
                 <span className="font-bold">TypeScript and PostgreSQL</span>. I
@@ -41,8 +41,8 @@ export default function About() {
             <p>
                 <span className="italic">When I'm not coding</span>, I enjoy
                 playing video games, taking boxing classes, and watching NBA
-                games. I love <span className="font-bold">staying active</span>.
-                I'm a former{" "}
+                games. I love <span className="font-bold">staying active</span>
+                as a former{" "}
                 <span className="font-bold">Division 1 Athlete</span> at{" "}
                 <span className="font-bold">
                     University of California, Irvine

@@ -93,10 +93,10 @@ export const projectsData = [
         type: "freelance",
         description:
             "Artist website for rapper Rocco808. With over 20K fans, admirers can now feel even closer to their favorite artist.",
-        tags: ["JavaScript", "HTML", "CSS"],
+        tags: ["React", "Next.js", "TypeScript", "Tailwind", "Framer Motion"],
         imageUrl: Rocco,
         liveLink: "https://rocco-808.com/",
-        githubLink: "https://github.com/LeoHarada/Rocco808",
+        githubLink: "https://github.com/LeoHarada/Rocco808v2",
     },
     {
         title: "CoderHeaven Ecommerce",
