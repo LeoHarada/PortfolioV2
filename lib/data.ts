@@ -55,7 +55,7 @@ export const experiencesData = [
         title: "Front-End Developer",
         location: "Santa Monica, CA",
         description:
-            "I started working on my first freelance project for rap artist, Rocco808. I used basic JavaScript, HTML and CSS. Client has a following of 20K fans and has showcased his newly developed website to top talent agencies based in Japan.",
+            "Freelance project with rap artist, Rocco808. I used React.js, Next.js, TypeScript, Tailwind and Framer Motion. Resulting in increased user engagement with over 20K fans and has displayed his newly developed website to top talent agencies based in Japan.",
         icon: React.createElement(CgWorkAlt),
         date: "November - December 2023",
     },
@@ -63,7 +63,7 @@ export const experiencesData = [
         title: "Full-Stack Developer",
         location: "Santa Monica, CA",
         description:
-            "My second freelance project was with artist Dulcie Yamanaka. With 40K followers on Instagram, I built her an ecommerce site to sell her first product. I used React, Express.js, Node.js, MongoDB, Tailwind and Stripe.",
+            "Freelance project with artist, Dulcie Yamanaka. I used React.js, Node.js, Express.js, MongoDB and Tailwind. Resulting in more than 30+ online sales within the first week and increased user engagement by 20% with her 40K Instagram followers.",
         icon: React.createElement(CgWorkAlt),
         date: "December 2023 - January 2024",
     },
@@ -71,7 +71,7 @@ export const experiencesData = [
         title: "Full-Stack Developer",
         location: "Los Angeles, CA",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, Node.js, TypeScript, Tailwind, PostgreSQL and MongoDB. I'm open to full-time opportunities.",
+            "I'm now a full-stack developer working as a freelancer. My stack includes React.js, Next.js, Node.js, TypeScript, Tailwind, PostgreSQL and MongoDB. I'm open to full-time and freelance opportunities.",
         icon: React.createElement(FaReact),
         date: "present",
     },
@@ -82,8 +82,8 @@ export const projectsData = [
         title: "The Living Letters",
         type: "freelance",
         description:
-            "Static ecommerce website for artist Dulcie Yamanaka. Her 40K Instagram followers are able to purchase her coloring book.",
-        tags: ["React", "MongdoDB", "Node.js", "Expresss", "Tailwind"],
+            "Single product ecommerce website for artist, Dulcie Yamanaka. Her 40K Instagram followers are able to purchase her highly requested coloring book.",
+        tags: ["React.js", "MongdoDB", "Node.js", "Expresss.js", "Tailwind"],
         imageUrl: LivingLetters,
         liveLink: "https://thelivinglettersart.com/",
         githubLink: "https://github.com/LeoHarada/LivingLetters",
@@ -92,8 +92,14 @@ export const projectsData = [
         title: "Rocco808",
         type: "freelance",
         description:
-            "Artist website for rapper Rocco808. With over 20K fans, admirers can now feel even closer to their favorite artist.",
-        tags: ["React", "Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+            "Static page for rapper, Rocco808. With over 20K fans, admirers can now feel even closer to their favorite artist.",
+        tags: [
+            "React.js",
+            "Next.js",
+            "TypeScript",
+            "Tailwind",
+            "Framer Motion",
+        ],
         imageUrl: Rocco,
         liveLink: "https://rocco-808.com/",
         githubLink: "https://github.com/LeoHarada/Rocco808v2",
@@ -103,7 +109,7 @@ export const projectsData = [
         type: "project",
         description:
             "Ecommerce website for web developer essentials. Users can purchase, filter and upload products.",
-        tags: ["React", "MongdoDB", "Node.js", "Expresss", "Tailwind"],
+        tags: ["React.js", "MongdoDB", "Node.js", "Expresss.js", "Tailwind"],
         imageUrl: Ecommerce,
         liveLink: "https://coder-heaven.vercel.app/",
         githubLink: "https://github.com/LeoHarada/CoderHeaven",
@@ -113,7 +119,7 @@ export const projectsData = [
         type: "project",
         description:
             "A public web blog for my coding journey. Sign in through Github OAuth. Users can read, filter and upload articles.",
-        tags: ["React", "PostgreSQL", "Next.js", "Prisma", "Tailwind"],
+        tags: ["React.js", "PostgreSQL", "Next.js", "Prisma", "Tailwind"],
         imageUrl: Blog,
         liveLink: "https://leos-blo.vercel.app/",
         githubLink: "https://github.com/LeoHarada/leos-blo",
@@ -125,7 +131,7 @@ export const skillsData = [
     "CSS",
     "JavaScript",
     "TypeScript",
-    "React",
+    "React.js",
     "Next.js",
     "Node.js",
     "Git",
@@ -133,7 +139,7 @@ export const skillsData = [
     "Tailwind",
     "MongoDB",
     "Redux",
-    "Express",
+    "Express.js",
     "PostgreSQL",
     "Framer Motion",
 ] as const;
