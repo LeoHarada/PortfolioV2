@@ -64,7 +64,7 @@ export default function Hero() {
                     Leo Harada
                 </h1>
                 <h2 className="text-center text-white text-2xl font-black text-whitesmoke sm:text-3xl md:text-4xl">
-                    Frontend Developer
+                    Full Stack Developer
                 </h2>
                 <p className="mb-6 mt-4 max-w-3xl text-center text-lg font-light text-neutral-400 md:text-xl">
                     Welcome to my World of Innovative and Interactive Web
